@@ -1,5 +1,5 @@
-// app/layout.js (Update this file)
-import './globals.css'; // Make sure this is imported first!
+// app/layout.js (UPDATED: Contains the Header and Footer only once)
+import './globals.css';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 
@@ -12,11 +12,11 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className="flex flex-col min-h-screen">
-        <Header /> 
+        <Header /> {/* RENDERED ONCE GLOBALLY */}
         <main className="flex-grow">
-          {children} {/* This renders the content of the current page */}
+          {children} 
         </main>
-        <Footer /> {/* Footer placed outside the main content area */}
+        <Footer />
       </body>
     </html>
   );

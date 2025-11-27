@@ -7,7 +7,6 @@ import { onAuthStateChanged } from 'firebase/auth';
 import { db, auth } from '../../lib/firebase';
 import JobForm from '../../components/JobForm';
 import JobTable from '../../components/JobTable';
-import Header from '../../components/Header';
 import AuthComponent from '../../components/AuthComponent';
 
 export default function Dashboard() {

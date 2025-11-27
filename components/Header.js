@@ -1,7 +1,7 @@
 // components/Header.js
 
-"use client"; // <-- ADD THIS LINE FIRST
-// components/Header.js (Update the navigation links)
+"use client"; // <-- ESSENTIAL CLIENT DIRECTIVE
+
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { signOut } from 'firebase/auth';
@@ -11,7 +11,6 @@ import { auth } from '../lib/firebase';
 const Header = () => {
     const [user, setUser] = useState(null);
 
-    // Track user state globally for conditional navigation
     useEffect(() => {
         const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
             setUser(currentUser);
@@ -25,7 +24,7 @@ const Header = () => {
 
     return (
         <header className="flex justify-between items-center bg-white p-4 shadow-lg sticky top-0 z-10">
-            <Link href="/" className="text-2xl font-extrabold text-indigo-700 hover:text-indigo-900 transition">
+            <Link href="/marketing" className="text-2xl font-extrabold text-indigo-700 hover:text-indigo-900 transition">
                 Job Tracker
             </Link>
             

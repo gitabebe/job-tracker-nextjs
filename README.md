@@ -10,8 +10,8 @@ This is a personal job application tracking tool designed to demonstrate core fr
 
 | Deployment Type | Link |
 | :--- | :--- |
-| **Live Demo URL (Vercel)** | [PASTE YOUR VERCEL URL HERE] (e.g., `job-tracker-nextjs.vercel.app`) |
-| **GitHub Repository** | [Link to this repository] |
+| **Live Demo URL (Vercel)** | [https://job-tracker-nextjs-three.vercel.app/) |
+| **GitHub Repository** | [https://github.com/gitabebe/job-tracker-nextjs] |
 
 ---
 

@@ -1,8 +1,6 @@
 // app/marketing/page.js
 import React from 'react';
 import Link from 'next/link';
-import { auth } from '@/lib/firebase'; // Assuming lib folder is at root
-import { onAuthStateChanged } from 'firebase/auth';
 
 const MarketingPage = () => {
   return (
@@ -27,21 +25,18 @@ const MarketingPage = () => {
             <h2 className="text-3xl font-bold text-center mb-12 text-gray-800">Designed by Developers, For Developers</h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
                 
-                {/* Feature 1 */}
                 <div className="text-center p-6 bg-white rounded-lg shadow-md">
                     <div className="text-4xl text-indigo-500 mb-4">⚙️</div>
                     <h3 className="text-xl font-semibold mb-2">Full CRUD Functionality</h3>
                     <p className="text-gray-600">Add, view, update, and delete job entries with a persistent database connection via Firebase Firestore.</p>
                 </div>
 
-                {/* Feature 2 */}
                 <div className="text-center p-6 bg-white rounded-lg shadow-md">
                     <div className="text-4xl text-indigo-500 mb-4">📊</div>
                     <h3 className="text-xl font-semibold mb-2">Instant Status Filtering</h3>
                     <p className="text-gray-600">Filter your applications by 'Interviewing,' 'Offer,' or 'Rejected' instantly with real-time updates.</p>
                 </div>
 
-                {/* Feature 3 */}
                 <div className="text-center p-6 bg-white rounded-lg shadow-md">
                     <div className="text-4xl text-indigo-500 mb-4">📱</div>
                     <h3 className="text-xl font-semibold mb-2">Mobile Responsive UI</h3>
