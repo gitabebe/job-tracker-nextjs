@@ -1,10 +1,13 @@
 // components/AuthComponent.js
 "use client"; // <-- ADD THIS LINE FIRST
 import React, { useState } from 'react';
+import { useRouter } from 'next/navigation';
 import { signInWithEmailAndPassword, createUserWithEmailAndPassword } from 'firebase/auth';
 import { auth } from '../lib/firebase';
 
+
 const AuthComponent = () => {
+    const router = useRouter()
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [isRegistering, setIsRegistering] = useState(false);
@@ -19,10 +22,13 @@ const AuthComponent = () => {
             } else {
                 await signInWithEmailAndPassword(auth, email, password);
             }
+            router.push('/dashboard'); 
         } catch (err) {
             setError(err.message);
         }
     };
+
+
 
     return (
         <div className="flex flex-col items-center justify-center min-h-screen bg-gray-100">
